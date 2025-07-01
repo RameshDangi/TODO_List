@@ -6,9 +6,9 @@ ad_btn.addEventListener("click", ()=>{
     input.placeholder = "add task";
     input.id = "value_ad";
 
-    let para = document.querySelector("#new_task");
+    let list_add = document.querySelector("li");
     input.addEventListener("input", ()=>{
-        para.innerText = input.value;
+        list_add.innerText = input.value;
     });
 
     task.push(input.value);
