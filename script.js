@@ -17,6 +17,7 @@ ad_btn.addEventListener("click", ()=>{
         if(event.key === "Enter"){
             let li = document.createElement("li");
             li.textContent = input.value;
+            li.className = "task_item";
             task.push(input.value);
             tasklist.appendChild(li);
             input.remove();
