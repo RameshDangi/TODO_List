@@ -6,12 +6,23 @@ ad_btn.addEventListener("click", ()=>{
     input.placeholder = "add task";
     input.id = "value_ad";
 
-    let list_add = document.querySelector("li");
-    input.addEventListener("input", ()=>{
-        list_add.innerText = input.value;
-    });
 
-    task.push(input.value);
+    let list_add = document.querySelector("#tasklist");
 
     document.body.appendChild(input);
+    document.body.appendChild(list_add);
+
+
+    input.addEventListener("keydown", (event)=>{
+        if(event.key === "Enter"){
+            let li = document.createElement("li");
+            li.textContent = input.value;
+            task.push(input.value);
+            tasklist.appendChild(li);
+            input.remove();
+            task.push(input.value);
+            console.log(task);
+        }
+    });
+
 });
