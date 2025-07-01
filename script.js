@@ -1,6 +1,5 @@
-let task = [];
-
 let ad_btn = document.querySelector("#ad");
+let task = [];
 ad_btn.addEventListener("click", ()=>{
     let input = document.createElement("input");
     input.type = "text";
@@ -11,6 +10,8 @@ ad_btn.addEventListener("click", ()=>{
     input.addEventListener("input", ()=>{
         para.innerText = input.value;
     });
+
+    task.push(input.value);
 
     document.body.appendChild(input);
 });
